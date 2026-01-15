@@ -1,0 +1,52 @@
+<section
+  class="hero"
+  (mouseenter)="stopAutoSlide()"
+  (mouseleave)="startAutoSlide()"
+>
+  <div
+    class="slide"
+    *ngFor="let slide of slides; let i = index"
+    [class.active]="i === currentIndex"
+  >
+    <div class="container">
+      <!-- LEFT CONTENT -->
+      <div class="content">
+        <span class="tagline">{{ slide.tagline }}</span>
+
+        <h1>{{ slide.title }}</h1>
+
+        <p>{{ slide.description }}</p>
+
+        <div class="actions">
+          <button class="primary">Shop Now</button>
+          <button class="secondary">Explore</button>
+        </div>
+
+        <div class="highlights">
+          <span>🌿 100% Natural</span>
+          <span>🚚 Fast Delivery</span>
+          <span>🧪 No Chemicals</span>
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="image">
+        <img [src]="slide.image" alt="Hero Banner" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ARROWS -->
+  <!-- <span class="nav prev" (click)="prev()">&#10094;</span>
+  <span class="nav next" (click)="next()">&#10095;</span> -->
+
+  <!-- DOTS -->
+<div class="dots">
+  <span
+    *ngFor="let slide of slides; let i = index"
+    class="dot"
+    [class.active]="i === currentIndex"
+    (click)="goTo(i)"
+  ></span>
+</div>
+</section>

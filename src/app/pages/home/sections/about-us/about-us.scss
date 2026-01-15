@@ -1,0 +1,50 @@
+.about-us {
+  padding: 80px 8%;
+  background: #fff;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .content {
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #1b5e20;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 26px;
+      background: #1b5e20;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  }
+
+  .image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-us {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+}

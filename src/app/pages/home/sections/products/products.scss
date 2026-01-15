@@ -1,0 +1,91 @@
+// .products {
+//   padding: 60px;
+//   text-align: center;
+
+//   .grid {
+//     display: grid;
+//     grid-template-columns: repeat(4, 1fr);
+//     gap: 30px;
+//   }
+
+//   button {
+//     background: #000;
+//     color: #fff;
+//     border: none;
+//     padding: 8px 20px;
+//   }
+//       img {
+//       width: 100%;
+//       height: 180px;        /* ✅ CONTROL IMAGE HEIGHT */
+//       object-fit: contain; /* keeps image ratio */
+//       margin-bottom: 15px;
+//     }
+// }
+
+
+.products {
+  padding: 10px 10px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 45px;
+  letter-spacing: 0.4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* PRODUCT CARD */
+.product {
+  background: #fff;
+  border-radius: 22px;
+  padding: 28px 22px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* CARD LIFT */
+.product:hover {
+  transform: translateY(-12px);
+}
+
+/* IMAGE */
+.product img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+  transition: all 0.45s ease;
+}
+
+/* IMAGE GLOW */
+.product:hover img {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 0 6px color-mix(in srgb, var(--accent) 18%, transparent),
+    0 0 26px var(--accent);
+}
+
+/* TITLE */
+.product h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 14px;
+  color: #222;
+}
+
+/* OUTLINE COLORS */
+.outline-purple { --accent: #7C5CFF; }
+.outline-orange { --accent: #FF8A00; }
+.outline-green  { --accent: #00BFA6; }
+.outline-pink   { --accent: #E91E63; }
