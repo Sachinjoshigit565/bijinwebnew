@@ -1,5 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Scroll } from '../../../../scroll';
+
 
 @Component({
   selector: 'app-hero',
@@ -9,6 +11,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./hero.scss']
 })
 export class HeroComponent implements OnInit, OnDestroy {
+  @ViewChild('homeSection') homeSection!: ElementRef;
+
   currentIndex = 0;
   intervalId: any;
 
@@ -35,8 +39,17 @@ export class HeroComponent implements OnInit, OnDestroy {
     }
   ];
 
+  constructor(private scrollService: Scroll) { }
+
+
   ngOnInit(): void {
     this.startAutoSlide();
+
+    this.scrollService.scrollTohome$.subscribe(() => {
+      this.homeSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    });
+
+
   }
 
   ngOnDestroy(): void {
@@ -67,8 +80,8 @@ export class HeroComponent implements OnInit, OnDestroy {
       (this.currentIndex - 1 + this.slides.length) % this.slides.length;
   }
 
-goTo(index: number): void {
-  this.currentIndex = index;
-  this.startAutoSlide(); // reset timer
-}
+  goTo(index: number): void {
+    this.currentIndex = index;
+    this.startAutoSlide(); // reset timer
+  }
 }

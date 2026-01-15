@@ -16,9 +16,9 @@ import { AboutUsComponent } from './pages/home/sections/about-us/about-us';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent,HeroComponent,CategoriesComponent,
-    ProductsComponent,WhyUsComponent,NewsletterComponent,AboutUsComponent
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, HeroComponent, CategoriesComponent,
+    ProductsComponent, WhyUsComponent, NewsletterComponent, AboutUsComponent
   ],
   templateUrl: './app.html'
 })
-export class AppComponent {}
+export class AppComponent { }
