@@ -1,6 +1,119 @@
-.why {
+.why-choose-us {
+  padding: 110px 30px;
+  background: linear-gradient(180deg, #ffffff, #f6f5f1);
+  text-align: center;
+}
+
+.section-subtitle {
+  max-width: 650px;
+  margin: 20px auto 80px;
+  font-size: 17px;
+  color: #6b6b6b;
+  line-height: 1.6;
+}
+
+/* Grid */
+.why-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* Card */
+.why-card {
+  background: #fff;
+  border-radius: 26px;
+  padding: 50px 28px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.why-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 35px 65px rgba(0, 0, 0, 0.14);
+}
+
+/* Icon Box */
+.icon-box {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  background: linear-gradient(135deg, #c6a96a, #b89a5a);
+  border-radius: 50%;
   display: flex;
-  justify-content: space-around;
-  padding: 50px;
-  background: #f7f7f7;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(198, 169, 106, 0.4);
+  transition: transform 0.4s ease;
+}
+
+.icon-box img {
+  width: 42px;
+  filter: brightness(0) invert(1);
+}
+
+/* Hover animation */
+.why-card:hover .icon-box {
+  transform: rotate(6deg) scale(1.05);
+}
+
+/* Text */
+.why-card h3 {
+  font-size: 20px;
+  margin: 28px 0 14px;
+  color: #2a2a2a;
+  font-weight: 600;
+}
+
+.why-card p {
+  font-size: 15px;
+  color: #6a6a6a;
+  line-height: 1.6;
+}
+
+/* Gold Border Accent */
+.why-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 26px;
+  border: 1.5px solid transparent;
+  transition: border 0.4s ease;
+}
+
+.why-card:hover::after {
+  border-color: #c6a96a;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 34px;
+  }
+}
+
+.why-card:hover .icon-box {
+  animation: goldPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: 0 12px 30px rgba(198, 169, 106, 0.4);
+  }
+  50% {
+    box-shadow: 0 16px 40px rgba(198, 169, 106, 0.6);
+  }
 }

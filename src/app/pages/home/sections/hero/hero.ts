@@ -21,21 +21,21 @@ export class HeroComponent implements OnInit, OnDestroy {
       tagline: 'Pure • Natural • Authentic',
       title: 'Experience the Power of Nature',
       description:
-        'Premium quality products made with natural ingredients and traditional wisdom.',
-      image: 'https://images.unsplash.com/photo-1600180758890-6b94519a8ba6'
+        'At Bijin Healthcare, we believe your skincare should be as pure as the world around us. Our premium collection blends traditional wisdom with modern dermatology to bring you a glow that’s rooted in nature. No harsh chemicals—just botanical brilliance.',
+      image: 'assets/images/bannner1.png'
     },
     {
       tagline: 'Healthy Living',
       title: 'Care That Comes From Nature',
       description:
-        'Chemical-free products crafted for a healthier and happier lifestyle.',
-      image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9'
+        'True wellness starts at the source. At Bijin Healthcare, we spend years researching the purest botanicals to ensure you never have to choose between safety and results. Our chemical-free formulas are meticulously crafted for a healthier, happier you.',
+      image: 'assets/images/bannner2.png'
     },
     {
       tagline: 'Tradition Meets Quality',
       title: 'Inspired by Ancient Wisdom',
-      description: 'Rooted in tradition, made for modern homes.',
-      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883'
+      description: 'Inspired by ancient wisdom, our creations honor time-tested practices while embracing uncompromising quality. Every detail reflects a legacy of craftsmanship passed down through generations, thoughtfully refined for the modern world.',
+      image: 'assets/images/bannner3.png'
     }
   ];
 

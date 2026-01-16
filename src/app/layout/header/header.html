@@ -1,15 +1,17 @@
 
-<header class="header">
+<header #headSection class="header">
+    <div class="header-container">
+
   <div class="logo">
     <img
-      src="assets/images/bijinlogo.png"
+      src="assets/images/bijinlogonew.jpeg"
       alt="Bijin Logo"
       class="logo-img"
     />
   </div>
 
   <nav class="nav">
-    <a (click)="goToHome()" class="active">Home</a>
+    <a (click)="goToHome()" >Home</a>
     <a  (click)="goToProducts()">Product Range</a>
     <a (click)="goToAboutus()">About</a>
     <a (click)="goToContact()">Contact</a>
@@ -17,7 +19,7 @@
     
   </nav>
 
-  <button class="cta">
-    Query
-  </button>
+  <button class="cta"> Query </button>
+    </div>
+
 </header>

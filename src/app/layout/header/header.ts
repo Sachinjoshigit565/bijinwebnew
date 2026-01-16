@@ -20,7 +20,7 @@ export class HeaderComponent {
 
     goToAboutus() {this.scrollService.scrollToaboutus();}
 
-    goToHome() {this.scrollService.scrollToaboutus();}
+    goToHome() {this.scrollService.scrollTohome();}
 
 
   
